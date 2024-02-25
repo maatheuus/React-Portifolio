@@ -1,0 +1,40 @@
+.header {
+  background-color: #ffff;
+  height: auto;
+  &__content {
+    display: flex;
+  }
+}
+
+.nav {
+  width: 100%;
+  &__list {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &-buttons {
+      list-style: none;
+      display: flex;
+      transition: all 0.4s;
+    }
+    &-icons {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      transition: all 0.4s;
+
+      & .svg {
+        height: 2.8rem;
+        width: 2.8rem;
+        cursor: pointer;
+      }
+    }
+
+    &-buttons:hover,
+    &-icons:hover {
+      transform: translateY(-3px);
+    }
+  }
+}

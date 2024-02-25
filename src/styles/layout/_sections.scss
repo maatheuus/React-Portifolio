@@ -1,0 +1,56 @@
+.section-top {
+  width: 100%;
+  height: 100%;
+
+  .content-section {
+    margin-top: 6rem;
+
+    display: flex;
+    justify-content: space-around;
+
+    &__introduction {
+      background-color: red;
+      min-width: 40%;
+      height: 50rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    & .section-list {
+      &__buttons {
+        list-style: none;
+        display: flex;
+
+        background: orange;
+        &--contact {
+          background-color: #fff;
+          border-radius: 4rem;
+          text-align: left;
+          height: 2rem;
+          width: 15rem;
+          padding: 1rem;
+
+          display: flex;
+          justify-content: space-between;
+
+          .arrow {
+            background-color: black;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+          }
+          .arrow-link {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__profile {
+      background-color: black;
+      min-width: 40%;
+      //   height: 10rem;
+    }
+  }
+}

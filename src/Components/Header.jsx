@@ -1,17 +1,13 @@
 import ListNav from "./ListNav";
 
 export default function Header() {
-  const nameHeader = "<Matheus />";
-
   return (
-    <header>
-      <h1>{nameHeader}</h1>
-
-      <nav>
-        <ul>
+    <header className="header">
+      <div className="header__content">
+        <nav className="nav">
           <ListNav />
-        </ul>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }

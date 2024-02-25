@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Numans&display=swap");
+
+.header {
+  &__title {
+    font-family: "Noticia Text", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+  }
+}
+
+.nav__list {
+  &-buttons {
+    font-family: "Noticia Text", serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+}

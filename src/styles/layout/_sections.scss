@@ -1,34 +1,39 @@
 .section-top {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  //   height: 100%;
+  background-color: var(--color-black);
 
   .content-section {
-    margin-top: 6rem;
-
     display: flex;
     justify-content: space-around;
 
     &__introduction {
-      background-color: red;
+      background-color: var(--color-black);
       min-width: 40%;
       height: 50rem;
+      margin-top: 6rem;
 
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
+
     & .section-list {
       &__buttons {
         list-style: none;
-        display: flex;
 
-        background: orange;
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+
         &--contact {
-          background-color: #fff;
+          background-color: #ffffffdb;
           border-radius: 4rem;
           text-align: left;
-          height: 2rem;
-          width: 15rem;
+
+          height: 2.3rem;
+          width: 13rem;
           padding: 1rem;
 
           display: flex;
@@ -40,13 +45,15 @@
             width: 1rem;
             height: 1rem;
             border-radius: 50%;
-            transition: all 0.5s;
+            transition: all 0.3s;
             position: relative;
+          }
 
-            &:hover {
+          &:hover {
+            .arrow {
               transform: scale(3);
 
-              .arrow-link {
+              &-link {
                 visibility: visible;
                 z-index: 10;
                 position: absolute;
@@ -54,19 +61,52 @@
               }
             }
           }
+
           .arrow-link {
             visibility: hidden;
             width: 1.8rem;
             height: 1.8rem;
+            fill: var(--color-white);
+          }
+        }
+
+        &--linkedin,
+        &--github {
+          background-color: rgb(31, 31, 31);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          width: 1.4rem;
+          height: 1.4rem;
+          padding: 1rem;
+
+          & .svg {
+            width: 1.8rem;
+            height: 1.8rem;
             fill: rgb(173, 215, 110);
           }
+
+          border-radius: 50%;
         }
       }
     }
 
     &__profile {
-      background-color: black;
+      //   background-color: gray;
       min-width: 40%;
+      margin-top: 6rem;
+
+      &--image {
+        background-color: white;
+        border-radius: 1.5rem;
+
+        width: 40rem;
+        height: 40rem;
+
+        margin: 0 auto;
+        margin-top: 6rem;
+      }
       //   height: 10rem;
     }
   }

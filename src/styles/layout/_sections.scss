@@ -193,3 +193,65 @@
 }
 
 /* SECTION PROJECTS */
+.section-projects {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+
+  & .projects {
+    width: 80%;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    &__content {
+      width: 60%;
+      margin-top: 6rem;
+    }
+    &__image {
+      background-color: black;
+      border-radius: 1.5rem;
+
+      width: 36rem;
+      height: 30rem;
+
+      margin-right: auto;
+      margin-top: 6rem;
+    }
+  }
+}
+
+.links {
+  margin-top: 2rem;
+
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+
+  &__link {
+    margin-right: 1rem;
+
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+
+    & .svg {
+      padding-left: 0.8rem;
+      width: 1.5rem;
+      height: 2rem;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.invert-direction {
+  flex-direction: row-reverse;
+}
+
+/* SECTION CONTACT */

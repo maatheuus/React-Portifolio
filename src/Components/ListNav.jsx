@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-import { FaLanguage, FaMoon } from "react-icons/fa";
+import { FaLanguage, FaSun } from "react-icons/fa";
 
 export default function ListNav() {
   const nameHeader = "<Matheus />";
@@ -36,9 +36,12 @@ export default function ListNav() {
           <li>
             <Button className="nav__list-icons button">
               {" "}
-              <FaMoon
+              <FaSun
                 className="svg"
-                style={{ height: "2rem", width: "2rem" }}
+                style={{
+                  height: "2rem",
+                  width: "2rem",
+                }}
               />
             </Button>
           </li>

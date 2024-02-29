@@ -1,4 +1,4 @@
-export default function MoonDark({ ...props }) {
+export default function ArrowLink({ ...props }) {
   return (
     <>
       <svg

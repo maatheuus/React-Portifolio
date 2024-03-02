@@ -1,0 +1,26 @@
+.nav__list-icons--theme {
+  display: block;
+  position: relative;
+}
+
+.icons-theme {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  left: -13px;
+  top: 15px;
+  margin-top: 0.4rem;
+  padding: 0.3rem;
+  border-radius: 5rem;
+
+  & .svg {
+    margin-right: 0.5rem;
+    width: 16px;
+    height: 16px;
+  }
+}
+.circle-half:hover {
+}
+.icons-theme:hover {
+  visibility: visible;
+}

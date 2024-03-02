@@ -1,0 +1,52 @@
+.content-form {
+  height: 35rem;
+  width: 40rem;
+
+  & .form {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+
+    & input[type="text"],
+    & input[type="email"] {
+      height: 4rem;
+      margin-bottom: 1.5rem;
+      padding-left: 1rem;
+      border-radius: 0.4rem;
+      border: 1px solid #000000;
+      outline: none;
+      color: #000000be;
+      box-shadow: 1px 2px 5px 1px #00000033;
+    }
+
+    & textarea {
+      height: 10rem;
+      padding-left: 1rem;
+      padding-top: 1rem;
+      border-radius: 0.4rem;
+      border: 1px solid #000000;
+      outline: none;
+      color: #000000be;
+      box-shadow: 1px 2px 5px 1px #00000033;
+    }
+  }
+
+  .btn-submit {
+    margin: 1rem 0;
+
+    &__button {
+      background-color: var(--color-black);
+      cursor: pointer;
+
+      color: white;
+      padding: 0.7rem;
+      width: 9rem;
+      border: none;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: translateY(3px);
+      }
+    }
+  }
+}

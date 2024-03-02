@@ -1,6 +1,9 @@
 import Button from "./Button";
 
-import { FaLanguage, FaSun } from "react-icons/fa";
+import CircleHalf from "./svg/CircleHalf";
+import Translate from "./svg/Translate";
+import Sun from "./svg/Sun";
+import Moon from "./svg/Moon";
 
 export default function ListNav() {
   const nameHeader = "<Matheus />";
@@ -30,19 +33,17 @@ export default function ListNav() {
           <li>
             <Button className="nav__list-icons button">
               {" "}
-              <FaLanguage className="svg" />
+              <Translate className="svg" />
             </Button>
           </li>
           <li>
-            <Button className="nav__list-icons button">
+            <Button className="nav__list-icons--theme button">
               {" "}
-              <FaSun
-                className="svg"
-                style={{
-                  height: "2rem",
-                  width: "2rem",
-                }}
-              />
+              <CircleHalf className="svg circle-half" />
+              <div className="icons-theme">
+                <Moon />
+                <Sun />
+              </div>
             </Button>
           </li>
         </ul>

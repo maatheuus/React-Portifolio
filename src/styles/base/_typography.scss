@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Numans&display=swap");
 
 /*
-.baloo-bhaijaan 2-<uniquifier> {
+.baloo-bhaijaan 2-<uniquifier>   {
   font-family: "Baloo Bhaijaan 2", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
@@ -35,6 +35,10 @@
     font-family: "Noticia Text", serif;
     font-size: 1.7rem;
     font-weight: 700;
+
+    &:hover {
+      color: rgb(161, 206, 95);
+    }
   }
 }
 
@@ -63,6 +67,7 @@
     }
   }
 }
+
 .section-list {
   &__buttons--contact span {
     font-family: "Numans", sans-serif;
@@ -187,7 +192,7 @@
 
     & .span-talk {
       font-weight: 900;
-      color: #000000b6;
+      color: #0000008f;
     }
     & .span-line {
       display: block;
@@ -209,5 +214,15 @@
 
       margin-right: 1rem;
     }
+  }
+}
+
+.icons-theme {
+  &--dark,
+  &--light,
+  &--normal {
+    font-size: 1.2rem;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-weight: 800;
   }
 }

@@ -1,10 +1,14 @@
+import { useContext } from "react";
+import { ThemeContext } from "../context/color-theme-context";
+
 import Input from "./Input";
 import Button from "./Button";
 
 function ContactForm() {
+  const { theme } = useContext(ThemeContext);
   return (
     <>
-      <section className="section-contact">
+      <section className={`section-contact ${theme} `}>
         <div className="section-contact__content">
           <div className="content-form">
             <form

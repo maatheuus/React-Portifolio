@@ -1,26 +1,64 @@
 .nav__list-icons--theme {
   display: block;
-  position: relative;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
 }
 
 .icons-theme {
-  visibility: hidden;
-  display: flex;
   position: absolute;
-  left: -13px;
-  top: 15px;
-  margin-top: 0.4rem;
-  padding: 0.3rem;
-  border-radius: 5rem;
+  top: 4.6rem;
+  left: 2rem;
 
-  & .svg {
-    margin-right: 0.5rem;
+  border-radius: 0 0 1rem 1rem;
+
+  background-color: #fff;
+  & .dark,
+  & .normal,
+  & .light {
+    margin-left: 0.9rem;
     width: 16px;
     height: 16px;
   }
+
+  &--dark,
+  &--light,
+  &--normal {
+    display: flex;
+
+    background-color: transparent;
+    border: none;
+    margin: 0.7rem;
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+  }
+
+  &--dark:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    fill: white;
+  }
+  &--normal:hover {
+    background-color: rgba(0, 0, 0, 0.763);
+    color: white;
+    fill: white;
+  }
 }
-.circle-half:hover {
-}
-.icons-theme:hover {
-  visibility: visible;
+
+.arrow-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border: none;
+  background: transparent;
+
+  .svg {
+    border-radius: 40%;
+    background-color: #fff;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+  }
 }

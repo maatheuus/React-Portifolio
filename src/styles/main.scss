@@ -5,7 +5,6 @@
 
 @forward "./layout/_header.scss";
 @forward "./layout/_sections.scss";
-@forward "./layout/_footer.scss";
 
 @forward "./base/_typography";
 
@@ -13,3 +12,5 @@
 @forward "./components/_links";
 @forward "./components/_form";
 @forward "./components/_svg";
+@forward "./components/_darkMode";
+@forward "./components/lightMode";

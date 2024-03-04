@@ -1,0 +1,79 @@
+.dark-mode {
+  background-color: black;
+  //   SECTION INTRODUCTION
+  .header__title {
+    color: white !important;
+  }
+
+  .nav__list {
+    .svg {
+      fill: white;
+    }
+
+    &-buttons {
+      color: white;
+
+      &:hover {
+        color: rgb(161, 206, 95);
+      }
+    }
+  }
+  // SECTION SKILLS
+  .section-content {
+    * {
+      color: white;
+      fill: white;
+    }
+
+    & .content-skills {
+      &__skill {
+        &:hover {
+          background-color: #fff;
+          * {
+            color: black;
+            fill: var(--color-black);
+          }
+        }
+      }
+    }
+  }
+
+  // SECTION PROJECTS
+  .section-projects {
+    &__title {
+      color: white;
+    }
+  }
+  .projects {
+    color: white;
+
+    .projects-description__text {
+      color: white;
+    }
+
+    .links__link {
+      border-color: white;
+      color: white;
+      fill: white;
+    }
+  }
+
+  // SECTION CONTACT
+  .section-contact__content {
+    * {
+      color: #fff;
+    }
+    & input[type="text"],
+    & input[type="email"],
+    & textarea {
+      border-color: #fff;
+      box-shadow: 1px 2px 5px 1px #fff;
+    }
+
+    & button {
+      background-color: #fff;
+      color: black;
+      box-shadow: 1px 1px 5px 1px #fff;
+    }
+  }
+}

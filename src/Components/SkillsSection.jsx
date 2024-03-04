@@ -1,34 +1,26 @@
+import { useContext } from "react";
+import { ThemeContext } from "../context/color-theme-context";
+
+import ListSkills from "./ListSkills";
+
 import { FaJs, FaReact, FaSass, FaHtml5, FaCss3 } from "react-icons/fa";
 
 export default function SkillsSection() {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <section className="section-skills">
-      <div className="section-content">
+    <section className={`section-skills ${theme}`}>
+      <div className="section-content ">
         <h1 className="section-content__title">
           <span>My</span> <span className="span-projects">Skills</span>
         </h1>
 
         <div className="content-skills">
-          <div className="content-skills__skill">
-            <FaJs className="svg" />
-            <h2 className="content-skills__skill--title">JavaScript</h2>
-          </div>
-          <div className="content-skills__skill">
-            <FaReact className="svg" />
-            <h2 className="content-skills__skill--title">React</h2>
-          </div>
-          <div className="content-skills__skill">
-            <FaHtml5 className="svg" />
-            <h2 className="content-skills__skill--title">Html5</h2>
-          </div>
-          <div className="content-skills__skill">
-            <FaCss3 className="svg" />
-            <h2 className="content-skills__skill--title">Css3</h2>
-          </div>
-          <div className="content-skills__skill">
-            <FaSass className="svg" />
-            <h2 className="content-skills__skill--title">Sass/Scss</h2>
-          </div>
+          <ListSkills icon={<FaJs className="svg" />} title="JavaScript" />
+          <ListSkills icon={<FaReact className="svg" />} title="React" />
+          <ListSkills icon={<FaHtml5 className="svg" />} title="Html5" />
+          <ListSkills icon={<FaCss3 className="svg" />} title="Css3" />
+          <ListSkills icon={<FaSass className="svg" />} title="Sass/Scss" />
         </div>
       </div>
     </section>

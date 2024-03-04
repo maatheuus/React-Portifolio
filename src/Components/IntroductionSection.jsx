@@ -1,10 +1,16 @@
+import { useContext } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import Button from "./Button";
+import { ThemeContext } from "../context/color-theme-context";
+
 import ArrowLink from "../Components/svg/ArrowLink";
+import LinksIntroduction from "./LinksIntroduction";
+import ListButtonsIcons from "./ListButtonsIcons";
 
 export default function IntroductionSection() {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <section className="section-top">
+    <section className={`section-top ${theme}`}>
       <div className="content-section">
         <div className="content-section__introduction">
           <h1 className="content-section__introduction-title">
@@ -17,44 +23,27 @@ export default function IntroductionSection() {
           </p>
           <div className="section-list">
             <ul className="section-list__buttons">
-              <li>
-                <a
-                  href="mailto:matts14smkd@gmail.com"
-                  target="_blanc"
-                  className="link-style"
-                >
-                  <Button className="button section-list__buttons--contact">
-                    <span>Contact me</span>
-                    <div className="arrow">
-                      <ArrowLink className="arrow-link" />
-                    </div>
-                  </Button>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/matheusmaat/"
-                  target="_blanc"
-                  className="link-style"
-                >
-                  <Button className="button section-list__buttons--linkedin">
-                    {" "}
-                    <FaLinkedin className="svg" />
-                  </Button>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/maatheuus"
-                  target="_blanc"
-                  className="link-style"
-                >
-                  <Button className="button section-list__buttons--github">
-                    {" "}
-                    <FaGithub className="svg" />
-                  </Button>
-                </a>
-              </li>
+              <LinksIntroduction href="mailto:matts14smkd@gmail.com">
+                <ListButtonsIcons
+                  icons={<ArrowLink className="arrow-link svg" />}
+                  text="Contact me"
+                  classDiv="arrow"
+                  classButton="button section-list__buttons--contact"
+                />
+              </LinksIntroduction>
+
+              <LinksIntroduction href="https://www.linkedin.com/in/matheusmaat/">
+                <ListButtonsIcons
+                  icons={<FaLinkedin className="svg" />}
+                  classButton="button section-list__buttons--linkedin"
+                />
+              </LinksIntroduction>
+              <LinksIntroduction href="https://github.com/maatheuus">
+                <ListButtonsIcons
+                  icons={<FaGithub className="svg" />}
+                  classButton="button section-list__buttons--github"
+                />
+              </LinksIntroduction>
             </ul>
           </div>
         </div>

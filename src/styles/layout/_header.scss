@@ -10,6 +10,7 @@
   width: 100%;
   &__list {
     height: 7rem;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -17,24 +18,31 @@
     &-buttons {
       list-style: none;
       display: flex;
-      transition: all 0.4s;
+      transition: all 0.3s;
     }
     &-icons {
       list-style: none;
+      position: relative;
+
       display: flex;
       align-items: center;
-      transition: all 0.4s;
+      transition: all 0.3s;
 
       & .svg {
-        height: 2.8rem;
-        width: 2.8rem;
+        height: 1.8rem;
+        width: 1.8rem;
         cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          transform: translateY(-4px);
+        }
       }
     }
 
     &-buttons:hover,
     &-icons:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
     }
   }
 }

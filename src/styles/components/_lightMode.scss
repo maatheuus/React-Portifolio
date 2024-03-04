@@ -1,0 +1,40 @@
+.light-mode {
+  background-color: white;
+  //   SECTION TOP
+  .content-section {
+    &__introduction {
+      background-color: white;
+
+      &-title,
+      &-text {
+        color: var(--color-black);
+      }
+    }
+
+    & .section-list {
+      &__buttons {
+        &--contact {
+          background-color: black;
+          color: #fff;
+
+          .arrow {
+            background-color: black;
+          }
+        }
+
+        & .svg {
+          width: 1.8rem;
+          height: 1.8rem;
+          fill: white;
+        }
+      }
+    }
+  }
+  // SECTION ABOUT
+  .about {
+    &__title,
+    &__text {
+      color: black;
+    }
+  }
+}

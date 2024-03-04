@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import { ThemeContext } from "../context/color-theme-context";
+
 export default function AboutSection() {
+  const { theme } = useContext(ThemeContext);
   return (
-    <section className="section-about">
+    <section className={`section-about ${theme}`}>
       <div className="about">
         <div className="about__image"></div>
 

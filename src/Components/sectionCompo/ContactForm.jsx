@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { ThemeContext } from "../context/color-theme-context";
+import { ThemeContext } from "../../context/color-theme-context";
 
-import Input from "./Input";
-import Button from "./Button";
+import Input from "../Input";
+import Button from "../Button";
 
 function ContactForm() {
   const { theme } = useContext(ThemeContext);

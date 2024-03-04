@@ -1,39 +1,26 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../context/color-theme-context";
 
 import ListButtonsIcons from "./ListButtonsIcons";
 
 import CircleHalf from "./svg/CircleHalf";
-import Translate from "./svg/Translate";
 import Sun from "./svg/Sun";
 import Moon from "./svg/Moon";
 
 function ButtonsTeste() {
-  const { clickTheme } = useContext(ThemeContext);
-
-  const [isHidden, setIsHidden] = useState(true);
+  const { iconTheme, isHidden, clickTheme, hiddenTheme } =
+    useContext(ThemeContext);
 
   const hidden = " hidden";
   let classIconsTheme = "icons-theme nav__list-icons--theme";
-
-  function handleHiddenThemes() {
-    setIsHidden(!isHidden);
-  }
 
   return (
     <div>
       <ul className="nav__list-icons ">
         <li>
           <ListButtonsIcons
-            icons={<Translate className="svg" />}
-            classButton="button"
-          />
-        </li>
-
-        <li>
-          <ListButtonsIcons
-            icons={<CircleHalf className="svg" />}
-            onClick={handleHiddenThemes}
+            icons={iconTheme}
+            onClick={hiddenTheme}
             classButton="button"
           />
         </li>
@@ -49,10 +36,10 @@ function ButtonsTeste() {
               onClick={() => clickTheme("dark")}
             />
             <ListButtonsIcons
-              text="Normal"
-              icons={<CircleHalf className="normal" />}
-              classButton="button icons-theme--normal"
-              onClick={() => clickTheme("normal")}
+              text="Default"
+              icons={<CircleHalf className="default" />}
+              classButton="button icons-theme--default"
+              onClick={() => clickTheme("default")}
             />
             <ListButtonsIcons
               text="Light"

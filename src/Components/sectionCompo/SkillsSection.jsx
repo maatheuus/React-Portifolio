@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { ThemeContext } from "../context/color-theme-context";
+import { ThemeContext } from "../../context/color-theme-context";
 
-import ListSkills from "./ListSkills";
+import ListSkills from "../ListSkills";
 
 import { FaJs, FaReact, FaSass, FaHtml5, FaCss3 } from "react-icons/fa";
 

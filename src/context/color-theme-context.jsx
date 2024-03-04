@@ -1,22 +1,40 @@
 import { createContext, useReducer } from "react";
 
+import CircleHalf from "../Components/svg/CircleHalf";
+import Sun from "../Components/svg/Sun";
+import Moon from "../Components/svg/Moon";
+
 function themeColorDispatch(state, action) {
-  if (action.color === "dark") {
-    // const colorState = {
-    //   theme: "dark-mode"
-    // }
-    return {
-      theme: "dark-mode",
-    };
+  if (action.type === "THEME_COLOR") {
+    if (action.color === "dark") {
+      return {
+        theme: "dark-mode",
+        isHidden: !state.isHidden,
+        iconTheme: <Moon className="dark dark-icon" />,
+      };
+    }
+
+    if (action.color === "default") {
+      return {
+        theme: "default",
+        isHidden: !state.isHidden,
+        iconTheme: <CircleHalf className="svg" />,
+      };
+    }
+    if (action.color === "light") {
+      return {
+        theme: "light-mode",
+        isHidden: !state.isHidden,
+        iconTheme: <Sun className="light" />,
+      };
+    }
   }
-  if (action.color === "normal") {
+
+  if (action.type === "HIDDEN_THEME") {
     return {
-      theme: "default",
-    };
-  }
-  if (action.color === "light") {
-    return {
-      theme: "light-mode",
+      theme: state.theme,
+      isHidden: !state.isHidden,
+      iconTheme: state.iconTheme,
     };
   }
 
@@ -25,24 +43,40 @@ function themeColorDispatch(state, action) {
 
 export const ThemeContext = createContext({
   theme: "",
+  iconTheme: "",
+  isHidden: Boolean,
   clickTheme: () => {},
+  hiddenTheme: () => {},
 });
 
 export default function ColorThemeContext({ children }) {
   const [state, dispatch] = useReducer(themeColorDispatch, {
     theme: "",
+    isHidden: Boolean,
+    iconTheme: <CircleHalf className="svg" />,
   });
+
+  function handleHiddenThemes() {
+    dispatch({
+      type: "HIDDEN_THEME",
+      isHidden: false,
+    });
+  }
 
   function handleClickThemes(colorClick) {
     dispatch({
       type: "THEME_COLOR",
       color: colorClick,
+      iconTheme: "",
     });
   }
 
   const ctxValue = {
     theme: state.theme,
+    isHidden: state.isHidden,
+    iconTheme: state.iconTheme,
     clickTheme: handleClickThemes,
+    hiddenTheme: handleHiddenThemes,
   };
   return (
     <ThemeContext.Provider value={ctxValue}>{children}</ThemeContext.Provider>

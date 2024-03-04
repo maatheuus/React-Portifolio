@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { ThemeContext } from "../context/color-theme-context";
+import { ThemeContext } from "../../context/color-theme-context";
 
-import ArrowLink from "../Components/svg/ArrowLink";
-import LinksIntroduction from "./LinksIntroduction";
-import ListButtonsIcons from "./ListButtonsIcons";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+
+import ArrowLink from "../svg/ArrowLink";
+import LinksIntroduction from "../LinksIntroduction";
+import ListButtonsIcons from "../ListButtonsIcons";
 
 export default function IntroductionSection() {
   const { theme } = useContext(ThemeContext);

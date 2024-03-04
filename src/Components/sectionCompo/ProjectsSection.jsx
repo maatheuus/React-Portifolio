@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { ThemeContext } from "../context/color-theme-context";
+import { ThemeContext } from "../../context/color-theme-context";
 
-import Projects from "./Projects";
+import Projects from "../Projects";
 
 function ProjectsSection() {
   const { theme } = useContext(ThemeContext);

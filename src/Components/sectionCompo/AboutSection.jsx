@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemeContext } from "../context/color-theme-context";
+import { ThemeContext } from "../../context/color-theme-context";
 
 export default function AboutSection() {
   const { theme } = useContext(ThemeContext);

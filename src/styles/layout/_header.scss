@@ -1,3 +1,5 @@
+@use "../abstract/mixin" as responsive;
+
 .header {
   background-color: #ffff;
   height: auto;
@@ -43,6 +45,13 @@
     &-buttons:hover,
     &-icons:hover {
       transform: translateY(-4px);
+    }
+  }
+
+  @include responsive.screen(phone) {
+    .nav__list-buttons,
+    .nav__list-icons {
+      display: none;
     }
   }
 }

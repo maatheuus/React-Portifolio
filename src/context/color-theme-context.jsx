@@ -72,7 +72,7 @@ export default function ColorThemeContext({ children }) {
   }
 
   const ctxValue = {
-    theme: state.theme,
+    theme: state.theme + " transition-background ",
     isHidden: state.isHidden,
     iconTheme: state.iconTheme,
     clickTheme: handleClickThemes,

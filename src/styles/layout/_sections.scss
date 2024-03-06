@@ -125,8 +125,9 @@
         }
       }
       & .section-list {
-        justify-content: flex-start;
         display: flex;
+        justify-content: flex-start;
+
         width: 80%;
         &__buttons {
           justify-content: flex-start;

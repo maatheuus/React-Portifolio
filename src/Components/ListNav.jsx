@@ -1,36 +1,43 @@
-import { useContext } from "react";
-
 import ListButtonsIcons from "./ListButtonsIcons";
-import ChangeTheme from "./ChangeTheme";
 
-import { ScrollContext } from "../context/scrollPage-button-context";
+import handleClickTop from "../scrollInterview";
 
-export default function ListNav() {
-  const nameHeader = "<Matheus />";
-
-  const { scrollTo } = useContext(ScrollContext);
-
+export default function ListNav({ titleHeader, className, children }) {
   return (
-    <div className={`nav__list `}>
-      <h1 className="header__title ">{nameHeader}</h1>
+    <div className={className}>
+      {titleHeader}
 
-      <div>
-        <ul className="nav__list-buttons ">
-          <li>
-            <ListButtonsIcons text="About me" onClick={scrollTo} />
-          </li>
-          <li>
-            <ListButtonsIcons text="Skills" onClick={scrollTo} />
-          </li>
-          <li>
-            <ListButtonsIcons text="Projects" onClick={scrollTo} />
-          </li>
-          <li>
-            <ListButtonsIcons text="Contact Me" onClick={scrollTo} />
-          </li>
-        </ul>
-      </div>
-      <ChangeTheme />
+      <ul className="nav__list-buttons ">
+        <li>
+          <ListButtonsIcons
+            text="About me"
+            onClick={() => handleClickTop("section-about")}
+            classButton="button nav__list-buttons"
+          />
+        </li>
+        <li>
+          <ListButtonsIcons
+            text="Skills"
+            onClick={() => handleClickTop("section-skills")}
+            classButton="button nav__list-buttons"
+          />
+        </li>
+        <li>
+          <ListButtonsIcons
+            text="Projects"
+            onClick={() => handleClickTop("section-projects")}
+            classButton="button nav__list-buttons"
+          />
+        </li>
+        <li>
+          <ListButtonsIcons
+            text="Contact Me"
+            onClick={() => handleClickTop("section-contact")}
+            classButton="button nav__list-buttons"
+          />
+        </li>
+      </ul>
+      {children}
     </div>
   );
 }

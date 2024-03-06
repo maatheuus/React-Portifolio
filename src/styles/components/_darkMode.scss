@@ -1,6 +1,17 @@
 .dark-mode {
   background-color: black;
 
+  //   MENU
+  .menu {
+    * {
+      fill: var(--color-white);
+      color: var(--color-white);
+    }
+
+    &__list {
+      border: 1px solid rgba(255, 255, 255, 0.344);
+    }
+  }
   //   SECTION INTRODUCTION
   .header__title {
     color: white !important;

@@ -10,28 +10,24 @@ import ArrowTop from "./Components/svg/ArrowTop";
 import ColorThemeContext from "./context/color-theme-context";
 import handleClickTop from "./scrollInterview";
 
-import ScrollPageContext from "./context/scrollPage-button-context";
-
 function App() {
   return (
     <ColorThemeContext>
-      <ScrollPageContext>
-        <Header />
+      <Header />
 
-        <main className="content">
-          <Button className="arrow-top" onClick={handleClickTop}>
-            <ArrowTop className="svg" />
-          </Button>
+      <main className="content">
+        <Button className="arrow-top" onClick={() => handleClickTop("header")}>
+          <ArrowTop className="svg" />
+        </Button>
 
-          <IntroductionSection />
-          <SkillsSection />
-          <AboutSection />
-          <ProjectsSection />
-          <ContactForm />
-        </main>
+        <IntroductionSection />
+        <SkillsSection />
+        <AboutSection />
+        <ProjectsSection />
+        <ContactForm />
+      </main>
 
-        <footer className="footer"></footer>
-      </ScrollPageContext>
+      <footer className="footer"></footer>
     </ColorThemeContext>
   );
 }

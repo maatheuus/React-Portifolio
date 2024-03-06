@@ -7,7 +7,7 @@ import CircleHalf from "./svg/CircleHalf";
 import Sun from "./svg/Sun";
 import Moon from "./svg/Moon";
 
-function ButtonsTeste() {
+function ButtonsTeste({ className }) {
   const { iconTheme, isHidden, clickTheme, hiddenTheme } =
     useContext(ThemeContext);
 
@@ -15,7 +15,7 @@ function ButtonsTeste() {
   let classIconsTheme = "icons-theme nav__list-icons--theme";
 
   return (
-    <div>
+    <div className={className}>
       <ul className="nav__list-icons ">
         <li>
           <ListButtonsIcons

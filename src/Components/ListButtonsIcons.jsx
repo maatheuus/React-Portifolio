@@ -4,7 +4,7 @@ function ListButtonsIcons({
   icons,
   text,
   onClick,
-  classButton = "button nav__list-buttons",
+  classButton,
   children,
   classDiv,
 }) {

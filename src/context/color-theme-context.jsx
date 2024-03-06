@@ -37,6 +37,12 @@ function themeColorDispatch(state, action) {
       iconTheme: state.iconTheme,
     };
   }
+  if (action.type === "SHOW_MENU") {
+    return {
+      theme: state.theme,
+      isHidden: !state.isHidden,
+    };
+  }
 
   return state;
 }
@@ -47,6 +53,7 @@ export const ThemeContext = createContext({
   isHidden: Boolean,
   clickTheme: () => {},
   hiddenTheme: () => {},
+  showMenu: () => {},
 });
 
 export default function ColorThemeContext({ children }) {
@@ -71,12 +78,20 @@ export default function ColorThemeContext({ children }) {
     });
   }
 
+  function handleShowMenu() {
+    dispatch({
+      type: "SHOW_MENU",
+      isHidden: false,
+    });
+  }
+
   const ctxValue = {
-    theme: state.theme + " transition-background ",
+    theme: state.theme + " transition-background",
     isHidden: state.isHidden,
     iconTheme: state.iconTheme,
     clickTheme: handleClickThemes,
     hiddenTheme: handleHiddenThemes,
+    showMenu: handleShowMenu,
   };
   return (
     <ThemeContext.Provider value={ctxValue}>{children}</ThemeContext.Provider>

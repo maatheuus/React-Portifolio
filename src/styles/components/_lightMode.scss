@@ -1,6 +1,13 @@
 .light-mode {
   background-color: white;
 
+  //   MENU
+  .menu {
+    &__list {
+      border: 1px solid rgba(0, 0, 0, 0.47);
+    }
+  }
+
   //   SECTION TOP
   .content-section {
     &__introduction {

@@ -129,9 +129,15 @@
         justify-content: flex-start;
 
         width: 80%;
+
         &__buttons {
           justify-content: flex-start;
           width: 80%;
+
+          &--contact {
+            justify-content: space-between;
+            padding-right: 2rem;
+          }
         }
       }
 

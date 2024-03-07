@@ -107,6 +107,10 @@
 
         margin: 0 auto;
         margin-top: 6rem;
+        & img {
+          width: 100%;
+          height: 100%;
+        }
       }
       //   height: 10rem;
     }
@@ -115,6 +119,10 @@
       flex-direction: column;
       padding-bottom: 2rem;
       align-items: center;
+
+      .section-top {
+        height: 100%;
+      }
 
       &__introduction {
         align-items: center;
@@ -145,6 +153,9 @@
         margin: 1rem 0;
       }
     }
+  }
+  @include responsive.screen(tab) {
+    height: 100%;
   }
 }
 

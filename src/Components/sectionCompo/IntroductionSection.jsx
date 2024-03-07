@@ -50,7 +50,11 @@ export default function IntroductionSection() {
         </div>
         <div className="content-section__profile">
           <div className="content-section__profile--image">
-            {/* <img src="" alt="photo of the user" /> */}
+            {/* <img
+              // src="../../assents/imagesProfile/foto-editada.png"
+              // src="src/assents/imagesProfile/foto.png"
+              alt="photo of the user"
+            /> */}
           </div>
         </div>
       </div>

@@ -1,8 +1,18 @@
-# React + Vite
+<h1 align="center">Meu Portfólio</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2> Bem vindo ao meu novo portifólio  .</h2>
 
-Currently, two official plugins are available:
+![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-FINALIZADO-green)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p style="font-size: 20px"> Esse novo portifólio foi criado para substituir (ou melhor, atualizar) meu antigo portifólio ao qual tenho muito orgulho em ter feito.</p>
+<h2>✔️ Tecnologias utilizadas</h2>
+
+- `SASS`: Utilizado para a estilização e responsividade do site.
+
+- `React.JS`: Utilizado para as interações no site. Utilizando 100% do JavaScript sem nenhum tipo de framework.
+
+<h3>Link para o site</h3>
+
+- Link para o novo site: (https://maat-matheus.netlify.app/)
+
+- Link para o antigo site: (https://matheusportifolio.netlify.app/)

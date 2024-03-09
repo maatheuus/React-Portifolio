@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../context/color-theme-context";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import imageProfile from "../../../public/photo-profile.jpg";
 
 import ArrowLink from "../svg/ArrowLink";
 import LinksIntroduction from "../LinksIntroduction";
@@ -50,10 +51,7 @@ export default function IntroductionSection() {
         </div>
         <div className="content-section__profile">
           <div className="content-section__profile--image">
-            <img
-              src="src\assents\imagesProfile\photo-profile.jpg"
-              alt="photo of the user"
-            />
+            <img src={imageProfile} alt="photo of the user" />
           </div>
         </div>
       </div>

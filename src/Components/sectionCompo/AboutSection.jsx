@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../context/color-theme-context";
 
+import imageBasket from "../../../public/profile-basket.jpg";
+
 export default function AboutSection() {
   const { theme } = useContext(ThemeContext);
   return (
@@ -8,10 +10,7 @@ export default function AboutSection() {
       <div className="about">
         <div className="about__profile">
           <div className="about__profile--image">
-            <img
-              src="src\assents\imagesProfile\profile-basket.jpg"
-              alt="photo of the user"
-            />
+            <img src={imageBasket} alt="photo of the user" />
           </div>
         </div>
 

@@ -1,5 +1,5 @@
 .light-mode {
-  background-color: white;
+  background-color: var(--color-white);
 
   //   MENU
   .menu {
@@ -11,7 +11,7 @@
   //   SECTION TOP
   .content-section {
     &__introduction {
-      background-color: white;
+      background-color: var(--color-white);
 
       &-title,
       &-text {
@@ -22,18 +22,18 @@
     & .section-list {
       &__buttons {
         &--contact {
-          background-color: black;
-          color: #fff;
+          background-color: var(--color-black);
+          color: var(--color-white);
 
           .arrow {
-            background-color: black;
+            background-color: var(--color-black);
           }
         }
 
         & .svg {
           width: 1.8rem;
           height: 1.8rem;
-          fill: white;
+          fill: var(--color-white);
         }
       }
     }
@@ -42,7 +42,7 @@
   .about {
     &__title,
     &__text {
-      color: black;
+      color: var(--color-black);
     }
   }
 }

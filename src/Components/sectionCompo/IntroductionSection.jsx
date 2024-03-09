@@ -14,13 +14,13 @@ export default function IntroductionSection() {
     <section className={`section-top ${theme}`}>
       <div className="content-section">
         <div className="content-section__introduction">
-          <h1 className="content-section__introduction-title">
-            <span className="span-hi">Hi, I am </span>
-            <span>Maat Bakari.</span>
+          <h1 className="content-section__introduction-title numans-regular">
+            <span className="span-hi">Hi, Eu sou o </span>
+            <span>Matheus.</span>
           </h1>
-          <p className="content-section__introduction-text">
-            Front-end developer passionate building accessible and user friendly
-            websites.
+          <p className="content-section__introduction-text numans-regular">
+            Desenvolvedor <strong>front-end </strong>apaixonado por construir
+            sites acessíveis e fáceis de usar.
           </p>
           <div className="section-list">
             <ul className="section-list__buttons">
@@ -29,7 +29,7 @@ export default function IntroductionSection() {
                   icons={<ArrowLink className="arrow-link svg" />}
                   text="Contact me"
                   classDiv="arrow"
-                  classButton="button section-list__buttons--contact"
+                  classButton="button section-list__buttons--contact numans-regular"
                 />
               </LinksIntroduction>
 
@@ -50,11 +50,10 @@ export default function IntroductionSection() {
         </div>
         <div className="content-section__profile">
           <div className="content-section__profile--image">
-            {/* <img
-              // src="../../assents/imagesProfile/foto-editada.png"
-              // src="src/assents/imagesProfile/foto.png"
+            <img
+              src="src\assents\imagesProfile\photo-profile.jpg"
               alt="photo of the user"
-            /> */}
+            />
           </div>
         </div>
       </div>

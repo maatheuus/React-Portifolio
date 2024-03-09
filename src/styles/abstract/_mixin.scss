@@ -30,3 +30,50 @@
     }
   }
 }
+
+@mixin displayDirection($items) {
+  display: flex;
+  flex-direction: column;
+  @if $items == alignItems {
+    align-items: center;
+  }
+  @if $items == justifyItems {
+    justify-content: center;
+  }
+  @if $items == "" {
+    @content;
+  }
+}
+@mixin displaySections($items) {
+  display: flex;
+  @if $items == alignItems {
+    align-items: center;
+  }
+  @if $items == justifyItems {
+    justify-content: center;
+  }
+  @if $items == "" {
+    @content;
+  }
+}
+
+@mixin viewport($height) {
+  width: 100%;
+  @if $height == vh {
+    height: 100vh;
+  }
+  @if $height == percentage {
+    height: 100%;
+  }
+}
+
+@mixin colorMode($color) {
+  @if $color == black {
+    color: black;
+    fill: black;
+  }
+  @if $color == white {
+    color: white;
+    fill: white;
+  }
+}

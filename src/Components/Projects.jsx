@@ -25,11 +25,15 @@ function Projects({
 
         <div className="projects__content">
           <div className="projects-description">
-            <h2 className="projects-description__title--number">
+            <h2 className="projects-description__title--number baloo-bhaijaan ">
               {numberOfProject}
             </h2>
-            <h3 className="projects-description__title--project">{title}</h3>
-            <p className="projects-description__text">{description}</p>
+            <h3 className="projects-description__title--project baloo-bhaijaan ">
+              {title}
+            </h3>
+            <p className="projects-description__text noticia-text-regular">
+              {description}
+            </p>
           </div>
           <div className="links">
             <ul className="links__list">
@@ -37,7 +41,7 @@ function Projects({
                 <a
                   href={liveDemo}
                   target="_black"
-                  className="links__link link-style"
+                  className="links__link link-style numans-regular"
                 >
                   Live demo
                   <ArrowLink className="svg" />
@@ -47,7 +51,7 @@ function Projects({
                 <a
                   href={seeOnGithub}
                   target="_black"
-                  className="links__link   link-style"
+                  className="links__link link-style numans-regular"
                 >
                   See on Github
                   <FaGithub className="svg" />

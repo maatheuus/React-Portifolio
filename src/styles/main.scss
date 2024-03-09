@@ -1,12 +1,13 @@
 @forward "./pages/_home";
 
-@forward "./abstract/_variables.scss";
-@forward "./abstract/_mixin.scss";
+@forward "./abstract/_variables";
+@forward "./abstract/_mixin";
 
-@forward "./layout/_header.scss";
-@forward "./layout/_sections.scss";
+@forward "./layout/_header";
+@forward "./layout/_sections";
 
 @forward "./base/_typography";
+@forward "./base/_utilities";
 
 @forward "./components/_button";
 @forward "./components/_menu";

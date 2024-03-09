@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Numans&display=swap");
 
-/*
-.baloo-bhaijaan 2-<uniquifier>   {
+.baloo-bhaijaan {
   font-family: "Baloo Bhaijaan 2", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
   font-style: normal;
+  font-weight: 400;
+  font-optical-sizing: auto;
 }
 
 .noticia-text-regular {
@@ -16,10 +15,9 @@
 
 .numans-regular {
   font-family: "Numans", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
-*/
 
 .header {
   &__title {
@@ -37,7 +35,7 @@
     font-weight: 700;
 
     &:hover {
-      color: rgb(161, 206, 95);
+      color: var(--color-yellowGreen);
     }
   }
 }
@@ -46,8 +44,7 @@
   &__introduction {
     &-title {
       font-size: 5rem;
-      font-family: "Numans", sans-serif;
-      font-weight: 600;
+
       color: var(--color-white);
 
       text-transform: uppercase;
@@ -58,8 +55,8 @@
     }
     &-text {
       font-size: 1.5rem;
-      font-family: "Numans", sans-serif;
       font-weight: 400;
+
       color: #ffffffa9;
 
       margin-top: 0.8rem;
@@ -68,20 +65,9 @@
   }
 }
 
-.section-list {
-  &__buttons--contact span {
-    font-family: "Numans", sans-serif;
-    font-weight: 600;
-  }
-}
-
 .section-content {
   &__title {
     font-size: 2.2rem;
-    font-family: "Baloo Bhaijaan 2", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-
     margin: 5rem;
 
     & .span-projects {
@@ -92,7 +78,6 @@
   & .content-skills__skill {
     &--title {
       font-size: 1.6rem;
-      font-family: "Baloo Bhaijaan 2", sans-serif;
       font-weight: 800;
 
       margin-top: 1.5rem;
@@ -104,7 +89,6 @@
 .about {
   &__title {
     font-size: 2rem;
-    font-family: "Numans", sans-serif;
     font-weight: 500;
 
     color: var(--color-white);
@@ -113,8 +97,7 @@
     }
   }
   &__text {
-    font-family: "Noticia Text", serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 
     width: 70%;
     margin-top: 2rem;
@@ -125,8 +108,6 @@
 .section-projects {
   &__title {
     font-size: 2.5rem;
-    font-family: "Baloo Bhaijaan 2", sans-serif;
-    font-weight: 500;
 
     text-align: center;
     padding-top: 3rem;
@@ -140,12 +121,10 @@
 
 .links {
   &__link {
-    font-family: "Numans", serif;
-    font-weight: 600;
     font-size: 1.3rem;
 
     text-transform: uppercase;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--color-black);
     padding: 0.4rem;
   }
 }
@@ -153,26 +132,23 @@
 .projects-description {
   &__title {
     &--number {
-      font-family: "Baloo Bhaijaan 2", sans-serif;
       font-size: 3rem;
       font-weight: 900;
     }
     &--project {
-      font-family: "Baloo Bhaijaan 2", sans-serif;
       font-size: 2.2rem;
       font-weight: 700;
     }
   }
 
   &__text {
-    font-family: "Noticia Text", serif;
     font-size: 1.2rem;
     font-weight: 600;
 
     width: 70%;
     margin-top: 2rem;
     text-transform: capitalize;
-    color: #000000;
+    color: var(--color-black);
   }
 }
 
@@ -188,7 +164,6 @@
 .information {
   &__title {
     font-size: 4rem;
-    font-family: "Baloo Bhaijaan 2", sans-serif;
     font-weight: 600;
 
     & .span-talk {
@@ -202,7 +177,6 @@
 
   &__email {
     font-size: 2rem;
-    font-family: "Baloo Bhaijaan 2", sans-serif;
     font-weight: 800;
     color: #00000073;
   }
@@ -210,7 +184,6 @@
   .footer {
     p {
       font-size: 1.2rem;
-      font-family: "Baloo Bhaijaan 2", sans-serif;
       font-weight: 600;
 
       margin-right: 1rem;

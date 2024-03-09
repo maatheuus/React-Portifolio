@@ -1,9 +1,9 @@
-@use "../abstract/mixin" as responsive;
+@use "../abstract/mixin" as mixin;
 
 /* FIRST SECTION */
 .section-top {
-  width: 100%;
-  height: 100vh;
+  @include mixin.viewport(vh);
+
   background-color: var(--color-black);
 
   .content-section {
@@ -16,9 +16,7 @@
       height: 50rem;
       margin-top: 6rem;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      @include mixin.displayDirection(justifyItems);
     }
 
     & .section-list {
@@ -38,17 +36,17 @@
           width: 13rem;
           padding: 1rem;
 
-          display: flex;
+          @include mixin.displaySections(alignItems);
           justify-content: space-around;
-          align-items: center;
 
           .arrow {
-            background-color: black;
-            width: 1rem;
-            height: 1rem;
+            background-color: var(--color-black);
             border-radius: 50%;
             transition: all 0.3s;
             position: relative;
+
+            width: 1rem;
+            height: 1rem;
           }
 
           &:hover {
@@ -68,16 +66,16 @@
             visibility: hidden;
             width: 1.8rem;
             height: 1.8rem;
-            fill: rgb(173, 215, 110);
+            fill: var(--color-yellowGreen);
           }
         }
 
         &--linkedin,
         &--github {
           background-color: rgb(31, 31, 31);
-          display: flex;
-          align-items: center;
-          justify-content: center;
+
+          @include mixin.displaySections(alignItems);
+          @include mixin.displaySections(justifyItems);
 
           width: 1.4rem;
           height: 1.4rem;
@@ -86,7 +84,7 @@
           & .svg {
             width: 1.8rem;
             height: 1.8rem;
-            fill: rgb(173, 215, 110);
+            fill: var(--color-yellowGreen);
           }
 
           border-radius: 50%;
@@ -101,21 +99,22 @@
       &--image {
         background-color: white;
         border-radius: 1.5rem;
+        overflow: hidden;
 
         width: 40rem;
-        height: 40rem;
+        height: 55rem;
 
         margin: 0 auto;
         margin-top: 6rem;
+
         & img {
           width: 100%;
           height: 100%;
         }
       }
-      //   height: 10rem;
     }
 
-    @include responsive.screen(tab) {
+    @include mixin.screen(tab) {
       flex-direction: column;
       padding-bottom: 2rem;
       align-items: center;
@@ -154,7 +153,7 @@
       }
     }
   }
-  @include responsive.screen(tab) {
+  @include mixin.screen(tab) {
     height: 100%;
   }
 }
@@ -168,17 +167,12 @@
     width: 100%;
     height: 70vh;
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include mixin.displayDirection(alignItems);
     justify-content: space-around;
 
     & .content-skills {
-      width: 100%;
-      height: 100%;
-
-      display: flex;
-      justify-content: center;
+      @include mixin.viewport(percentage);
+      @include mixin.displaySections(justifyItems);
       flex-wrap: wrap;
 
       &__skill {
@@ -210,14 +204,14 @@
     }
   }
 
-  @include responsive.screen(tab) {
+  @include mixin.screen(tab) {
     height: 100vh;
   }
 }
 /*SECTION ABOUT ME*/
 .section-about {
-  height: 100vh;
-  width: 100%;
+  @include mixin.viewport(percentage);
+
   background-color: var(--color-black);
 
   & .about {
@@ -228,19 +222,29 @@
       margin-top: 6rem;
     }
 
-    &__image {
-      background-color: rgba(255, 255, 255, 0.579);
-      border-radius: 1.5rem;
+    &__profile {
+      min-width: 40%;
+      margin: 6rem auto;
 
-      width: 40rem;
-      height: 40rem;
+      &--image {
+        background-color: var(--color-white);
+        border-radius: 1.5rem;
+        overflow: hidden;
 
-      margin: 0 auto;
-      margin-top: 6rem;
+        margin: 0 auto;
+
+        width: 40rem;
+        height: 55rem;
+
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
   }
 
-  @include responsive.screen(tab-port) {
+  @include mixin.screen(tab-port) {
     height: 100%;
 
     & .about {
@@ -261,17 +265,16 @@
 
 /* SECTION PROJECTS */
 .section-projects {
-  height: 100%;
-  width: 100%;
-  background-color: white;
+  @include mixin.viewport(percentage);
+
+  background-color: var(--color-white);
 
   & .projects {
     width: 80%;
 
     margin: 0 auto;
 
-    display: flex;
-    align-items: center;
+    @include mixin.displaySections(alignItems);
 
     &__content {
       width: 60%;
@@ -295,11 +298,10 @@
     }
   }
 
-  @include responsive.screen(tab-port) {
+  @include mixin.screen(tab-port) {
     & .projects {
-      display: flex;
+      @include mixin.displayDirection("");
       align-items: flex-start;
-      flex-direction: column;
 
       &__content {
         margin-top: 6rem;
@@ -309,13 +311,12 @@
         margin-top: 6rem;
 
         & img {
-          height: 100%;
-          width: 100%;
+          @include mixin.viewport(percentage);
         }
       }
     }
   }
-  @include responsive.screen(tab) {
+  @include mixin.screen(tab) {
     & .projects {
       &__content {
         margin-top: 2rem;
@@ -326,8 +327,7 @@
         margin: 6rem auto 0;
 
         & img {
-          height: 100%;
-          width: 100%;
+          @include mixin.viewport(percentage);
         }
       }
     }
@@ -345,8 +345,8 @@
   &__link {
     margin-right: 1rem;
 
-    display: flex;
-    align-items: center;
+    @include mixin.displaySections(alignItems);
+
     transition: all 0.3s;
 
     & .svg {
@@ -367,25 +367,23 @@
 
 /* SECTION CONTACT */
 .section-contact {
-  height: 100vh;
-  width: 100%;
-  background-color: white;
+  @include mixin.viewport(vh);
 
-  display: flex;
-  justify-content: center;
+  background-color: var(--color-white);
+
+  @include mixin.displaySections(justifyItems);
 
   &__content {
     width: 80%;
-    display: flex;
+
+    @include mixin.displaySections(alignItems);
     justify-content: space-around;
-    align-self: center;
   }
 
-  @include responsive.screen(tab) {
+  @include mixin.screen(tab) {
     height: 100%;
     &__content {
-      display: flex;
-      flex-direction: column;
+      @include mixin.displayDirection("");
 
       margin-top: 10rem;
     }
@@ -393,8 +391,7 @@
       text-align: center;
 
       .footer {
-        display: flex;
-        align-items: center;
+        @include mixin.displaySections(alignItems);
         justify-content: flex-end;
       }
     }
@@ -405,8 +402,8 @@
   height: 35rem;
   width: 40rem;
 
-  display: flex;
-  flex-direction: column;
+  @include mixin.displayDirection("");
+
   padding: 0.5rem;
 
   .footer {

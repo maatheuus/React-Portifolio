@@ -1,8 +1,9 @@
-@use "../abstract/mixin" as responsive;
+@use "../abstract/mixin" as mixin;
 
 .header {
-  background-color: #ffff;
+  background-color: var(--color-white);
   height: auto;
+
   &__content {
     display: flex;
   }
@@ -13,8 +14,7 @@
   &__list {
     height: 7rem;
 
-    display: flex;
-    align-items: center;
+    @include mixin.displaySections(alignItems);
     justify-content: space-around;
 
     &-buttons {
@@ -26,15 +26,15 @@
       list-style: none;
       position: relative;
 
-      display: flex;
-      align-items: center;
+      @include mixin.displaySections(alignItems);
       transition: all 0.3s;
 
       & .svg {
         height: 1.8rem;
         width: 1.8rem;
-        cursor: pointer;
+
         transition: all 0.3s;
+        cursor: pointer;
 
         &:hover {
           transform: translateY(-4px);
@@ -48,7 +48,7 @@
     }
   }
 
-  @include responsive.screen(phone) {
+  @include mixin.screen(phone) {
     .nav__list-buttons,
     .nav__list-icons {
       display: none;

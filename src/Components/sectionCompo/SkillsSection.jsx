@@ -11,7 +11,7 @@ export default function SkillsSection() {
   return (
     <section className={`section-skills ${theme}`}>
       <div className="section-content ">
-        <h1 className="section-content__title">
+        <h1 className="section-content__title baloo-bhaijaan">
           <span>My</span> <span className="span-projects">Skills</span>
         </h1>
 

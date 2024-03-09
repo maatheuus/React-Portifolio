@@ -1,11 +1,12 @@
+@use "../abstract/mixin" as mixin;
+
 .dark-mode {
-  background-color: black;
+  background-color: var(--color-black);
 
   //   MENU
   .menu {
     * {
-      fill: var(--color-white);
-      color: var(--color-white);
+      @include mixin.colorMode(white);
     }
 
     &__list {
@@ -14,36 +15,34 @@
   }
   //   SECTION INTRODUCTION
   .header__title {
-    color: white !important;
+    color: var(--color-white) !important;
   }
 
   .nav__list {
     .svg {
-      fill: white;
+      fill: var(--color-white);
     }
 
     &-buttons {
-      color: white;
+      color: var(--color-white);
 
       &:hover {
-        color: rgb(161, 206, 95);
+        color: var(--color-yellowGreen);
       }
     }
   }
   // SECTION SKILLS
   .section-content {
     * {
-      color: white;
-      fill: white;
+      @include mixin.colorMode(white);
     }
 
     & .content-skills {
       &__skill {
         &:hover {
-          background-color: #fff;
+          background-color: var(--color-white);
           * {
-            color: black;
-            fill: var(--color-black);
+            @include mixin.colorMode(black);
           }
         }
       }
@@ -53,39 +52,39 @@
   // SECTION PROJECTS
   .section-projects {
     &__title {
-      color: white;
+      color: var(--color-white);
     }
   }
   .projects {
-    color: white;
+    color: var(--color-white);
 
-    .projects-description__text {
-      color: white;
+    &-description__text {
+      color: var(--color-white);
     }
 
     .links__link {
-      border-color: white;
-      color: white;
-      fill: white;
+      border-color: var(--color-white);
+
+      @include mixin.colorMode(white);
     }
   }
 
   // SECTION CONTACT
   .section-contact__content {
     * {
-      color: #fff;
+      color: var(--color-white);
     }
     & input[type="text"],
     & input[type="email"],
     & textarea {
-      border-color: #fff;
-      box-shadow: 1px 2px 5px 1px #fff;
+      border-color: var(--color-white);
+      box-shadow: var(--box-shadow-white);
     }
 
     & button {
-      background-color: #fff;
-      color: black;
-      box-shadow: 1px 1px 5px 1px #fff;
+      background-color: var(--color-white);
+      color: var(--color-black);
+      box-shadow: var(--box-shadow-white);
     }
   }
 }

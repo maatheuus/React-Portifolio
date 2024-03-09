@@ -22,14 +22,10 @@ html {
   }
 }
 body {
-  background: #626161;
+  background: var(--color-black);
 }
 
-main {
-  height: 100%;
-  width: 100%;
-}
-
+main,
 footer {
   height: 100%;
   width: 100%;

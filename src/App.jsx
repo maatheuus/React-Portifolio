@@ -1,4 +1,3 @@
-import Button from "./Components/Button";
 import Header from "./Components/Header";
 import IntroductionSection from "./Components/sectionCompo/IntroductionSection";
 import SkillsSection from "./Components/sectionCompo/SkillsSection";
@@ -9,6 +8,7 @@ import ArrowTop from "./Components/svg/ArrowTop";
 
 import ColorThemeContext from "./context/color-theme-context";
 import handleClickTop from "./scrollInterview";
+import Button from "./Components/Button";
 
 function App() {
   return (

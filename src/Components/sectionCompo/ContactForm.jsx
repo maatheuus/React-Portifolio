@@ -26,7 +26,11 @@ function ContactForm() {
                 placeholder="How can I help?"
               />
               <div className="btn-submit">
-                <Button className="btn-submit__button" type="submit" required>
+                <Button
+                  className="btn-submit__button noticia-text-regular"
+                  type="submit"
+                  required
+                >
                   Get in Touch
                 </Button>
                 <Input type="hidden" name="_captcha" value="false" />
@@ -34,14 +38,16 @@ function ContactForm() {
             </form>
           </div>
           <div className="information">
-            <h1 className="information__title">
+            <h1 className="information__title baloo-bhaijaan ">
               Let&apos;s <span className="span-talk">talk</span> for{" "}
               <span className="span-line">Something special</span>
             </h1>
-            <p className="information__email">matts14smkd@gmail.com</p>
+            <p className="information__email baloo-bhaijaan ">
+              matts14smkd@gmail.com
+            </p>
 
-            <footer className="footer">
-              <p>@2024 Matheus</p>
+            <footer className="footer ">
+              <p className="baloo-bhaijaan ">@2024 Matheus</p>
               <p>&copy; All the right reserved</p>
             </footer>
           </div>

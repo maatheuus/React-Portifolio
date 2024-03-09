@@ -11,7 +11,7 @@ function ProjectsSection() {
   const { theme } = useContext(ThemeContext);
   return (
     <section className={`section-projects ${theme}`}>
-      <h1 className="section-projects__title">
+      <h1 className="section-projects__title baloo-bhaijaan">
         <span>My</span> <span className="span-projects">Projects</span>
       </h1>
       <Projects

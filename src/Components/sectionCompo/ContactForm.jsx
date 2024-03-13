@@ -16,14 +16,14 @@ function ContactForm() {
               method="POST"
               className="form"
             >
-              <Input type="text" autoComplete="on" placeholder="Your name" />
+              <Input type="text" autoComplete="on" placeholder="Seu nome" />
 
               <Input type="email" autoComplete="on" placeholder="Email" />
 
               <Input
                 type="textarea"
                 autoComplete="on"
-                placeholder="How can I help?"
+                placeholder="Como posso ajudar?"
               />
               <div className="btn-submit">
                 <Button
@@ -31,7 +31,7 @@ function ContactForm() {
                   type="submit"
                   required
                 >
-                  Get in Touch
+                  Enviar
                 </Button>
                 <Input type="hidden" name="_captcha" value="false" />
               </div>
@@ -39,8 +39,8 @@ function ContactForm() {
           </div>
           <div className="information">
             <h1 className="information__title baloo-bhaijaan ">
-              Let&apos;s <span className="span-talk">talk</span> for{" "}
-              <span className="span-line">Something special</span>
+              Vamos <span className="span-talk">conversar</span> para{" "}
+              <span className="span-line">Algo especial</span>
             </h1>
             <p className="information__email baloo-bhaijaan ">
               matts14smkd@gmail.com

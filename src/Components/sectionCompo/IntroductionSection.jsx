@@ -16,12 +16,12 @@ export default function IntroductionSection() {
       <div className="content-section">
         <div className="content-section__introduction">
           <h1 className="content-section__introduction-title numans-regular">
-            <span className="span-hi">Hi, Eu sou o </span>
+            <span className="span-hi">Hey, Eu sou o </span>
             <span>Matheus.</span>
           </h1>
           <p className="content-section__introduction-text numans-regular">
             Desenvolvedor <strong>front-end </strong>apaixonado por construir
-            sites acessíveis e fáceis de usar.
+            sites e outras coisinhas.
           </p>
           <div className="section-list">
             <ul className="section-list__buttons">

@@ -12,7 +12,7 @@ function ProjectsSection() {
   return (
     <section className={`section-projects ${theme}`}>
       <h1 className="section-projects__title baloo-bhaijaan">
-        <span>My</span> <span className="span-projects">Projects</span>
+        <span>Meus</span> <span className="span-projects">Projetos</span>
       </h1>
       <Projects
         numberOfProject="01"

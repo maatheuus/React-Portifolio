@@ -16,7 +16,7 @@ export default function AboutSection() {
 
         <div className="about__content">
           <h1 className="about__title numans-regular">
-            <span>About</span> <span className="span-me">Me</span>
+            <span>Sobre</span> <span className="span-me">Mim</span>
           </h1>
           <p className="about__text noticia-text-regular">
             Para chegar até a jornada de estudante de Desenvolvimento Web Front

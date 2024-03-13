@@ -15,15 +15,17 @@ function ButtonsTeste({ className }) {
   let classIconsTheme = "icons-theme nav__list-icons--theme";
 
   return (
-    <div className={className}>
+    <div id="theme" className={className}>
       <ul className="nav__list-icons ">
         <li>
           <ListButtonsIcons
             icons={iconTheme}
             onClick={hiddenTheme}
             classButton="button"
+            arial-label="Show Icons Theme"
           />
         </li>
+        <button aria-label="" role="" title=""></button>
 
         <li>
           <div

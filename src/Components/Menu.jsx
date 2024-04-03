@@ -14,7 +14,7 @@ function Menu() {
   const { theme, isHidden, clickTheme, showMenu } = useContext(ThemeContext);
 
   const hidden = "hidden";
-
+ 
   return (
     <>
       <menu className="menu">

@@ -2,10 +2,8 @@ import { useContext } from "react";
 import { motion } from "framer-motion";
 import { ThemeContext } from "../context/color-theme-context";
 
+import { projects } from "../util/utility.js";
 import Projects from "../Components/Projects";
-
-import ageApp from "../assents/imagesProjects/age-app.png";
-import ProjectsPage from "./ProjectsPage";
 
 function MainProjectsPage() {
   const { theme } = useContext(ThemeContext);
@@ -23,16 +21,21 @@ function MainProjectsPage() {
       exit="hidden"
       className={`section-projects ${theme}`}
     >
-      <ProjectsPage />
-
-      <Projects
-        numberOfProject="03"
-        title="Calc Age App (Caso de estudo)"
-        description="Esse foi meu primero projeto com Vanilla JavaScript, HTML5 e CSS. Esse projeto foi um desafio Frontend mentor, o que foi um desafio para o primeiro projeto."
-        images={ageApp}
-        liveDemo="https://maatheuus.github.io/calculator-app/"
-        seeOnGithub="https://github.com/maatheuus/calculator-app"
-      />
+      {projects.map((project) => {
+        return (
+          <Projects
+            key={project.id}
+            numberProject={project.numberProject}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            liveDemoUrl={project.liveDemoUrl}
+            existLiveDemo={project.existLiveDemo}
+            seeOnGithubUrl={project.seeOnGithubUrl}
+            invertImage={project.invertImage}
+          />
+        );
+      })}
     </motion.section>
   );
 }

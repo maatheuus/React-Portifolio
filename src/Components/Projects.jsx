@@ -2,15 +2,18 @@ import { motion } from "framer-motion";
 import ArrowLink from "./svg/ArrowLink";
 import { FaGithub } from "react-icons/fa";
 
-function Projects({
-  invertImage,
-  images,
-  liveDemo,
-  seeOnGithub,
-  description,
-  title,
-  numberOfProject,
-}) {
+function Projects(props) {
+  const {
+    invertImage,
+    numberProject,
+    title,
+    description,
+    image,
+    liveDemoUrl,
+    existLiveDemo,
+    seeOnGithubUrl,
+  } = props;
+
   let projects = "projects";
 
   if (invertImage) {
@@ -34,13 +37,13 @@ function Projects({
         exit="hidden"
       >
         <div className="projects__images">
-          <img src={images} alt="image of this project" />
+          <img src={image} alt="image of this project" />
         </div>
 
         <div className="projects__content">
           <div className="projects-description">
             <h2 className="projects-description__title--number baloo-bhaijaan ">
-              {numberOfProject}
+              {numberProject}
             </h2>
             <h3 className="projects-description__title--project baloo-bhaijaan ">
               {title}
@@ -51,19 +54,21 @@ function Projects({
           </div>
           <div className="links">
             <ul className="links__list">
+              {existLiveDemo && (
+                <li>
+                  <a
+                    href={liveDemoUrl}
+                    target="_black"
+                    className="links__link link-style numans-regular"
+                  >
+                    Live demo
+                    <ArrowLink className="svg" />
+                  </a>
+                </li>
+              )}
               <li>
                 <a
-                  href={liveDemo}
-                  target="_black"
-                  className="links__link link-style numans-regular"
-                >
-                  Live demo
-                  <ArrowLink className="svg" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href={seeOnGithub}
+                  href={seeOnGithubUrl}
                   target="_black"
                   className="links__link link-style numans-regular"
                 >

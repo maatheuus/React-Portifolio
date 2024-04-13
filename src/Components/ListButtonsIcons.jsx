@@ -1,13 +1,8 @@
 import Button from "./Button";
 
-function ListButtonsIcons({
-  icons,
-  text,
-  onClick,
-  classButton,
-  classDiv,
-  children,
-}) {
+function ListButtonsIcons(props) {
+  const { icons, text, onClick, classButton, classDiv, children } = props;
+
   return (
     <>
       <Button onClick={onClick} className={classButton}>

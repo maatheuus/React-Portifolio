@@ -4,11 +4,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { ThemeContext } from "../context/color-theme-context";
 
+import ProjectsPage from "./ProjectsPage";
 import ArrowLink from "../Components/svg/ArrowLink";
 import LinksIntroduction from "../Components/LinksIntroduction";
 import ListButtonsIcons from "../Components/ListButtonsIcons";
 import imageProfile from "../assents/imagesProfile/photo-profile.jpg";
-import ProjectsPage from "./ProjectsPage";
 
 export default function HomePage() {
   const { theme } = useContext(ThemeContext);
@@ -88,6 +88,7 @@ export default function HomePage() {
                     classButton="button section-list__buttons--linkedin"
                   />
                 </LinksIntroduction>
+
                 <LinksIntroduction href="https://github.com/maatheuus">
                   <ListButtonsIcons
                     icons={<FaGithub className="svg" />}
@@ -104,6 +105,7 @@ export default function HomePage() {
           </div>
         </motion.div>
       </section>
+
       <motion.div style={{ opacity: opacityBottom }}>
         <ProjectsPage />
       </motion.div>

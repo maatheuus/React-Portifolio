@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import ArrowLink from "./svg/ArrowLink";
 import { FaGithub } from "react-icons/fa";
 
@@ -18,7 +19,20 @@ function Projects({
 
   return (
     <>
-      <div className={projects}>
+      <motion.div
+        className={projects}
+        variants={{
+          hidden: { opacity: 0, y: 60 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.9, bounce: 0, type: "spring" },
+          },
+        }}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+      >
         <div className="projects__images">
           <img src={images} alt="image of this project" />
         </div>
@@ -60,7 +74,7 @@ function Projects({
             </ul>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

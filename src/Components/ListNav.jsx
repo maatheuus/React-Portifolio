@@ -1,42 +1,99 @@
+import { useContext } from "react";
+import { NavLink } from "react-router-dom";
+
+import { ThemeContext } from "../context/color-theme-context";
 import ListButtonsIcons from "./ListButtonsIcons";
 
-import handleClickTop from "../scrollInterview";
+export default function ListNav({ titleHeader, className, children, inMenu }) {
+  const { hiddenTheme } = useContext(ThemeContext);
 
-export default function ListNav({ titleHeader, className, children }) {
   return (
     <div className={className}>
       {titleHeader}
 
-      <ul className="nav__list-buttons ">
+      <ul className="nav__list-buttons">
         <li>
-          <ListButtonsIcons
-            text="Sobre"
-            onClick={() => handleClickTop("section-about")}
-            classButton="button nav__list-buttons"
-          />
+          <NavLink to=".." className="link-style">
+            {inMenu ? (
+              <ListButtonsIcons
+                onClick={hiddenTheme}
+                text="Home"
+                classButton="button nav__list-buttons"
+              />
+            ) : (
+              <ListButtonsIcons
+                text="Home"
+                classButton="button nav__list-buttons"
+              />
+            )}
+          </NavLink>
         </li>
         <li>
-          <ListButtonsIcons
-            text="Skills"
-            onClick={() => handleClickTop("section-skills")}
-            classButton="button nav__list-buttons"
-          />
+          <NavLink to="about" className="link-style">
+            {inMenu ? (
+              <ListButtonsIcons
+                onClick={hiddenTheme}
+                text="Sobre"
+                classButton="button nav__list-buttons"
+              />
+            ) : (
+              <ListButtonsIcons
+                text="Sobre"
+                classButton="button nav__list-buttons"
+              />
+            )}
+          </NavLink>
         </li>
         <li>
-          <ListButtonsIcons
-            text="Projetos"
-            onClick={() => handleClickTop("section-projects")}
-            classButton="button nav__list-buttons"
-          />
+          <NavLink to="skills" className="link-style">
+            {inMenu ? (
+              <ListButtonsIcons
+                onClick={hiddenTheme}
+                text="Skills"
+                classButton="button nav__list-buttons"
+              />
+            ) : (
+              <ListButtonsIcons
+                text="Skills"
+                classButton="button nav__list-buttons"
+              />
+            )}
+          </NavLink>
         </li>
         <li>
-          <ListButtonsIcons
-            text="Contato"
-            onClick={() => handleClickTop("section-contact")}
-            classButton="button nav__list-buttons"
-          />
+          <NavLink to="projects" className="link-style">
+            {inMenu ? (
+              <ListButtonsIcons
+                onClick={hiddenTheme}
+                text="Projetos"
+                classButton="button nav__list-buttons"
+              />
+            ) : (
+              <ListButtonsIcons
+                text="Projetos"
+                classButton="button nav__list-buttons"
+              />
+            )}
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="contact" className="link-style">
+            {inMenu ? (
+              <ListButtonsIcons
+                onClick={hiddenTheme}
+                text="Contato"
+                classButton="button nav__list-buttons"
+              />
+            ) : (
+              <ListButtonsIcons
+                text="Contato"
+                classButton="button nav__list-buttons"
+              />
+            )}
+          </NavLink>
         </li>
       </ul>
+
       {children}
     </div>
   );

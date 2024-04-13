@@ -1,15 +1,29 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../context/color-theme-context";
+import { motion } from "framer-motion";
+import { ThemeContext } from "../context/color-theme-context";
 
-import Input from "../Input";
-import Button from "../Button";
+import Input from "../Components/Input";
+import Button from "../Components/Button";
 
-function ContactForm() {
+function ContactPage() {
   const { theme } = useContext(ThemeContext);
   return (
     <>
       <section className={`section-contact ${theme} `}>
-        <div className="section-contact__content">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 60 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { delay: 0.8, bounce: 0, type: "spring" },
+            },
+          }}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          className="section-contact__content"
+        >
           <div className="content-form">
             <form
               action="https://formsubmit.co/matts14smkd@gmail.com"
@@ -51,10 +65,10 @@ function ContactForm() {
               <p>&copy; All the right reserved</p>
             </footer>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );
 }
 
-export default ContactForm;
+export default ContactPage;

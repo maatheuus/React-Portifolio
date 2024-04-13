@@ -14,7 +14,7 @@ function Menu() {
   const { theme, isHidden, clickTheme, showMenu } = useContext(ThemeContext);
 
   const hidden = "hidden";
- 
+
   return (
     <>
       <menu className="menu">
@@ -26,7 +26,8 @@ function Menu() {
           />
 
           <div className={`menu__list ${theme} ${isHidden && hidden} `}>
-            <ListNav className="menu__items" />
+            <ListNav className="menu__items" inMenu />
+
             <div className="menu__list-theme">
               <ListButtonsIcons
                 text="Dark"

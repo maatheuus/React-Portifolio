@@ -1,13 +1,28 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../context/color-theme-context";
+import { motion } from "framer-motion";
+import { ThemeContext } from "../context/color-theme-context";
 
-import imageBasket from "../../../public/profile-basket.jpg";
+import imageBasket from "../assents/imagesProfile/profile-basket.jpg";
 
-export default function AboutSection() {
+export default function AboutPage() {
   const { theme } = useContext(ThemeContext);
+
   return (
     <section className={`section-about ${theme}`}>
-      <div className="about">
+      <motion.div
+        className="about"
+        variants={{
+          hidden: { opacity: 0, y: 60 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.8, bounce: 0, type: "spring" },
+          },
+        }}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+      >
         <div className="about__profile">
           <div className="about__profile--image">
             <img src={imageBasket} alt="photo of the user" />
@@ -56,7 +71,7 @@ export default function AboutSection() {
             se mexer ativamente :).
           </p>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

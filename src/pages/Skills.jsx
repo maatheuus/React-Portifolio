@@ -1,19 +1,27 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../context/color-theme-context";
-
-import ListSkills from "../ListSkills";
-
+import { motion } from "framer-motion";
 import { FaJs, FaReact, FaSass, FaHtml5, FaCss3 } from "react-icons/fa";
 
-export default function SkillsSection() {
+import { ThemeContext } from "../context/color-theme-context";
+import ListSkills from "../Components/ListSkills";
+
+export default function SkillsPage() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <section className={`section-skills ${theme}`}>
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 0.6 },
+      }}
+      exit={{ opacity: 0 }}
+      className={`section-skills ${theme}`}
+    >
       <div className="section-content ">
-        <h1 className="section-content__title baloo-bhaijaan">
+        <motion.h1 className="section-content__title baloo-bhaijaan">
           <span>Minhas</span> <span className="span-projects">Skills</span>
-        </h1>
+        </motion.h1>
 
         <div className="content-skills">
           <ListSkills icon={<FaJs className="svg" />} title="JavaScript" />
@@ -23,6 +31,6 @@ export default function SkillsSection() {
           <ListSkills icon={<FaSass className="svg" />} title="Sass/Scss" />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -77,7 +77,6 @@ export default function ColorThemeContext({ children }) {
       iconTheme: "",
     });
   }
-  
 
   function handleShowMenu() {
     dispatch({

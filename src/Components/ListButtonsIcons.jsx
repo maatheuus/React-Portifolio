@@ -5,8 +5,8 @@ function ListButtonsIcons({
   text,
   onClick,
   classButton,
-  children,
   classDiv,
+  children,
 }) {
   return (
     <>

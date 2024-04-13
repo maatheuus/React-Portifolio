@@ -7,7 +7,7 @@ import CircleHalf from "./svg/CircleHalf";
 import Sun from "./svg/Sun";
 import Moon from "./svg/Moon";
 
-function ButtonsTeste({ className }) {
+function ChangeTheme({ className }) {
   const { iconTheme, isHidden, clickTheme, hiddenTheme } =
     useContext(ThemeContext);
 
@@ -25,7 +25,6 @@ function ButtonsTeste({ className }) {
             arial-label="Show Icons Theme"
           />
         </li>
-        <button aria-label="" role="" title=""></button>
 
         <li>
           <div
@@ -56,4 +55,4 @@ function ButtonsTeste({ className }) {
   );
 }
 
-export default ButtonsTeste;
+export default ChangeTheme;

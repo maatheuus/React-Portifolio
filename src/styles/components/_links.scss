@@ -3,3 +3,6 @@
   text-decoration: none;
   color: currentColor;
 }
+.active > button > span {
+  color: var(--color-yellowGreen);
+}

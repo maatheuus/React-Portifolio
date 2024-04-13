@@ -15,7 +15,7 @@ function ProjectsPage() {
         <span>Meus</span> <span className="span-projects">Projetos</span>
       </h1>
       <Projects
-        numberOfProject="01"
+        numberProject="01"
         title="Trillo Hotel"
         description="Este site foi feito para facilitar a busca por hotéis, proporcionando uma experiência intuitiva aos usuários. Nele é possível pesquisar a cidade que deseja do Brasil e escolher qualquer hotel disponível para aquela região e salvar para mais tarde caso queria pesquisar o hotel depois."
         image={trillo}
@@ -24,7 +24,7 @@ function ProjectsPage() {
       />
       <Projects
         invertImage
-        numberOfProject="02"
+        numberProject="02"
         title="Weather App"
         description="Esse site foi feito para facilitar quando você quiser saber como anda o clima na sua cidade ou em qualquer cidade do mundo. Com um design minimalista e agradável você se encontra fácil no site. (informações em inglês, até o momento)"
         image={weather}
@@ -32,7 +32,7 @@ function ProjectsPage() {
         seeOnGithub="https://github.com/maatheuus/WeatherApp"
       />
       <Projects
-        numberOfProject="03"
+        numberProject="03"
         title="Calc Age App"
         description="Esse foi meu primero projeto com Vanilla JavaScript, HTML5 e CSS. Esse projeto foi um desafio Frontend mentor, o que foi um desafio para o primeiro projeto."
         image={ageApp}

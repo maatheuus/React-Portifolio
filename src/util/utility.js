@@ -2,6 +2,7 @@ import trillo from "../assents/imagesProjects/hotel-trillo.png";
 import weather from "../assents/imagesProjects/weather-app.png";
 import ageApp from "../assents/imagesProjects/age-app.png";
 import foodApp from "../assents/imagesProjects/React-food-image.png";
+import fastPizza from "../assents/imagesProjects/react-fast-pizza.png";
 
 export const projects = [
   {
@@ -51,5 +52,17 @@ export const projects = [
     image: foodApp,
     existLiveDemo: false,
     seeOnGithubUrl: "https://github.com/maatheuus/ReactFood",
+  },
+  {
+    id: 5,
+    invertImage: false,
+    numberProject: "05",
+    title: "Fast React Pizza",
+    description:
+      "Fast Pizza é um site de estudo onde você pode escolher dentre diversas opções de pizzas com um layout amigável e um formulário para pegar seu endereço automaticamente (caso você permita) e seu número de celular.",
+    image: fastPizza,
+    liveDemoUrl: "https://react-fastpizza.netlify.app/",
+    existLiveDemo: true,
+    seeOnGithubUrl: "https://github.com/maatheuus/Fast-React-Pizza",
   },
 ];

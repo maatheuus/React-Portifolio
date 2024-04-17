@@ -5,7 +5,7 @@ import Projects from "../Components/Projects";
 
 import trillo from "../assents/imagesProjects/hotel-trillo.png";
 import weather from "../assents/imagesProjects/weather-app.png";
-import ageApp from "../assents/imagesProjects/age-app.png";
+import fastPizza from "../assents/imagesProjects/react-fast-pizza.png";
 
 function ProjectsPage() {
   const { theme } = useContext(ThemeContext);
@@ -35,9 +35,9 @@ function ProjectsPage() {
         numberProject="03"
         title="Calc Age App"
         description="Esse foi meu primero projeto com Vanilla JavaScript, HTML5 e CSS. Esse projeto foi um desafio Frontend mentor, o que foi um desafio para o primeiro projeto."
-        image={ageApp}
-        liveDemo="https://maatheuus.github.io/calculator-app/"
-        seeOnGithub="https://github.com/maatheuus/calculator-app"
+        image={fastPizza}
+        liveDemo="https://react-fastpizza.netlify.app/"
+        seeOnGithub="https://github.com/maatheuus/Fast-React-Pizza"
       />
     </section>
   );

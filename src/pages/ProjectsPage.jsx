@@ -33,8 +33,8 @@ function ProjectsPage() {
       />
       <Projects
         numberProject="03"
-        title="Calc Age App"
-        description="Esse foi meu primero projeto com Vanilla JavaScript, HTML5 e CSS. Esse projeto foi um desafio Frontend mentor, o que foi um desafio para o primeiro projeto."
+        title="React Fast App"
+        description="Projeto realizado para suprir as necessidade dos clientes em obter uma aplicação com fácil visualização e instruções."
         image={fastPizza}
         liveDemo="https://react-fastpizza.netlify.app/"
         seeOnGithub="https://github.com/maatheuus/Fast-React-Pizza"

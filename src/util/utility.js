@@ -16,8 +16,7 @@ export const projects = [
     image: trillo,
     liveDemoUrl: "https://hotelstrillo.netlify.app/",
     existLiveDemo: true,
-    seeOnGithubUrlUrl:
-      "https://github.com/maatheuus/Trillo-Hotel?tab=readme-ov-file",
+    seeOnGithubUrl: "https://github.com/maatheuus/Trillo-Hotel",
   },
   {
     id: 2,

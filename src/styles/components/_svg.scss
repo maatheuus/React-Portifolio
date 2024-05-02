@@ -35,11 +35,11 @@
 
   &--dark:hover {
     background-color: var(--color-black);
-    @include mixin.colorMode(white);
+    @include mixin.colorMode(var(--color-white));
   }
   &--default:hover {
     background-color: rgba(0, 0, 0, 0.763);
-    @include mixin.colorMode(white);
+    @include mixin.colorMode(var(--color-white));
   }
 }
 

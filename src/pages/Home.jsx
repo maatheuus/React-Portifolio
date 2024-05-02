@@ -3,12 +3,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { ThemeContext } from "../context/color-theme-context";
-
-import ProjectsPage from "./ProjectsPage";
 import ArrowLink from "../Components/svg/ArrowLink";
 import LinksIntroduction from "../Components/LinksIntroduction";
 import ListButtonsIcons from "../Components/ListButtonsIcons";
 import imageProfile from "../assents/imagesProfile/photo-profile.jpg";
+import ProjectsPage from "./ProjectsPage.jsx";
 
 export default function HomePage() {
   const { theme } = useContext(ThemeContext);

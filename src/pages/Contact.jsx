@@ -30,12 +30,23 @@ function ContactPage() {
               method="POST"
               className="form"
             >
-              <Input type="text" autoComplete="on" placeholder="Seu nome" />
+              <Input
+                name="name"
+                type="text"
+                autoComplete="on"
+                placeholder="Seu nome"
+              />
 
-              <Input type="email" autoComplete="on" placeholder="Email" />
+              <Input
+                name="email"
+                type="email"
+                autoComplete="on"
+                placeholder="Email"
+              />
 
               <Input
                 type="textarea"
+                name="description"
                 autoComplete="on"
                 placeholder="Como posso ajudar?"
               />
@@ -43,7 +54,6 @@ function ContactPage() {
                 <Button
                   className="btn-submit__button noticia-text-regular"
                   type="submit"
-                  required
                 >
                   Enviar
                 </Button>

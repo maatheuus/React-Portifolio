@@ -298,6 +298,25 @@
         object-fit: cover;
       }
     }
+
+    &__icons {
+      height: 5rem;
+      display: flex;
+      align-items: flex-end;
+      gap: 1.5rem;
+
+      & ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      & svg {
+        width: 2.6rem;
+        height: 2.6rem;
+        fill: currentColor;
+      }
+    }
   }
 
   @include mixin.screen(tab-port) {

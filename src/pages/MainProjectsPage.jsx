@@ -22,6 +22,11 @@ function MainProjectsPage() {
       className={`section-projects ${theme}`}
     >
       {projects.map((project) => {
+        const technology = {
+          tech: project.technologyUsed,
+          style: project.style,
+        };
+
         return (
           <Projects
             key={project.id}
@@ -33,6 +38,7 @@ function MainProjectsPage() {
             existLiveDemo={project.existLiveDemo}
             seeOnGithubUrl={project.seeOnGithubUrl}
             invertImage={project.invertImage}
+            technology={technology}
           />
         );
       })}

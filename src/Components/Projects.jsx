@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ArrowLink from "./svg/ArrowLink";
 import { FaGithub } from "react-icons/fa";
+import IconsTech from "./IconsTech";
 
 function Projects(props) {
   const {
@@ -12,6 +13,7 @@ function Projects(props) {
     liveDemoUrl,
     existLiveDemo,
     seeOnGithubUrl,
+    technology,
   } = props;
 
   let projects = "projects";
@@ -37,7 +39,7 @@ function Projects(props) {
         exit="hidden"
       >
         <div className="projects__images">
-          <img src={image} alt="image of this project" />
+          <img src={image} alt="image of the project" />
         </div>
 
         <div className="projects__content">
@@ -52,6 +54,11 @@ function Projects(props) {
               {description}
             </p>
           </div>
+
+          <div className="projects__icons">
+            <IconsTech icons={technology} />
+          </div>
+
           <div className="links">
             <ul className="links__list">
               {existLiveDemo && (

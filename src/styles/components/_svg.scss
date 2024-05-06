@@ -35,6 +35,7 @@
 
   &--dark:hover {
     background-color: var(--color-black);
+    color: var(--color-white);
     @include mixin.colorMode(var(--color-white));
   }
   &--default:hover {

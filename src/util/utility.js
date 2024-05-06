@@ -1,6 +1,5 @@
 import trillo from "../assents/imagesProjects/hotel-trillo.png";
 import weather from "../assents/imagesProjects/weather-app.png";
-import ageApp from "../assents/imagesProjects/age-app.png";
 import foodApp from "../assents/imagesProjects/React-food-image.png";
 import fastPizza from "../assents/imagesProjects/react-fast-pizza.png";
 import vacationPlans from "../assents/imagesProjects/vacation-plan.png";
@@ -50,22 +49,8 @@ export const projects = [
   },
   {
     id: 4,
-    invertImage: true,
-    numberProject: "04",
-    title: "Calc Age App",
-    description:
-      "Esse foi meu primero projeto com Vanilla JavaScript, HTML5 e CSS. Esse projeto foi um desafio Frontend mentor, o que foi um desafio para o primeiro projeto.",
-    image: ageApp,
-    liveDemoUrl: "https://maatheuus.github.io/calculator-app/",
-    existLiveDemo: true,
-    seeOnGithubUrl: "https://github.com/maatheuus/calculator-app",
-    technologyUsed: "JavaScript",
-    style: "Css",
-  },
-  {
-    id: 5,
     invertImage: false,
-    numberProject: "05",
+    numberProject: "04",
     title: "ReactFood",
     description:
       "ReactFood é um site aonde você pode escolher dentre diversas opções de comidas com um layout amigável e um formulário para inserir seus dados e fazer o pedido. Para mais detalhes de como iniciar, veja no github.",
@@ -76,9 +61,9 @@ export const projects = [
     style: "Css",
   },
   {
-    id: 6,
+    id: 5,
     invertImage: true,
-    numberProject: "06",
+    numberProject: "05",
     title: "Fast React Pizza",
     description:
       "Fast Pizza é um site de estudo onde você pode escolher dentre diversas opções de pizzas com um layout amigável e um formulário para pegar seu endereço automaticamente (caso você permita) e seu número de celular.",

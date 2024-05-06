@@ -3,6 +3,8 @@ import { ThemeContext } from "../context/color-theme-context";
 
 import { projects } from "../util/utility";
 import Projects from "../Components/Projects";
+import { Link } from "react-router-dom";
+import ArrowLink from "../Components/svg/ArrowLink";
 
 function ProjectsPage() {
   const { theme } = useContext(ThemeContext);
@@ -34,6 +36,19 @@ function ProjectsPage() {
           />
         );
       })}
+      <div
+        className="links"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "15px",
+        }}
+      >
+        <Link to="/projects" className="links__link link-style numans-regular">
+          Mais projetos
+          <ArrowLink className="svg" />
+        </Link>
+      </div>
     </section>
   );
 }

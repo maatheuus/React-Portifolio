@@ -6,7 +6,7 @@ import { ThemeContext } from "../context/color-theme-context";
 import ArrowLink from "../Components/svg/ArrowLink";
 import LinksIntroduction from "../Components/LinksIntroduction";
 import ListButtonsIcons from "../Components/ListButtonsIcons";
-import imageProfile from "../assents/imagesProfile/photo-profile.jpg";
+import imageProfile from "../../public/photo-profile.jpg";
 import ProjectsPage from "./ProjectsPage.jsx";
 
 export default function HomePage() {
@@ -67,8 +67,8 @@ export default function HomePage() {
               <span>Matheus.</span>
             </h1>
             <p className="content-section__introduction-text numans-regular">
-              Desenvolvedor <strong>front-end </strong>apaixonado por construir
-              sites e outras coisinhas.
+              Desenvolvedor <strong>React Front-end</strong> apaixonado por
+              construir sites e outras coisinhas.
             </p>
             <div className="section-list">
               <ul className="section-list__buttons">

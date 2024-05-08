@@ -1,8 +1,8 @@
-import trillo from "../assents/imagesProjects/hotel-trillo.png";
-import weather from "../assents/imagesProjects/weather-app.png";
-import foodApp from "../assents/imagesProjects/React-food-image.png";
-import fastPizza from "../assents/imagesProjects/react-fast-pizza.png";
-import vacationPlans from "../assents/imagesProjects/vacation-plan.png";
+import trillo from "../assents/imagesProjects/TrilloPhoto.png";
+import weather from "../assents/imagesProjects/WeatherPhoto.png";
+import foodApp from "../assents/imagesProjects/ReactFoodPhoto.png";
+import fastPizza from "../assents/imagesProjects/FastPizzaPhoto.png";
+import vacationPlans from "../assents/imagesProjects/VacationPhoto.png";
 
 export const projects = [
   {

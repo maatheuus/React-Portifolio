@@ -284,11 +284,12 @@
     }
     &__images {
       overflow: hidden;
+
       background-color: var(--color-black);
       border-radius: 1.5rem;
 
       max-width: 52rem;
-      height: 30rem;
+      height: 34rem;
 
       margin-right: 4rem;
       margin-top: 6rem;
@@ -296,6 +297,7 @@
       & img {
         width: 100%;
         object-fit: cover;
+        transform: scaleX(2.4) scaleY(2);
       }
     }
 
@@ -333,6 +335,8 @@
 
         & img {
           @include mixin.viewport(percentage);
+          // height: 100%;
+          transform: scaleX(1.1) scaleY(1.3);
         }
       }
     }

@@ -16,7 +16,7 @@ export const projects = [
     liveDemoUrl: "https://hotelstrillo.netlify.app/",
     existLiveDemo: true,
     seeOnGithubUrl: "https://github.com/maatheuus/Trillo-Hotel",
-    technologyUsed: "JavaScript",
+    technologyUsed: ["JavaScript"],
     style: "Sass",
   },
   {
@@ -30,7 +30,7 @@ export const projects = [
     liveDemoUrl: "https://vactions-plan.vercel.app/",
     existLiveDemo: true,
     seeOnGithubUrl: "https://github.com/maatheuus/VactionPlan",
-    technologyUsed: "React",
+    technologyUsed: ["React"],
     style: "Sass",
   },
   {
@@ -44,7 +44,7 @@ export const projects = [
     liveDemoUrl: "https://maatheuus.github.io/WeatherApp/",
     existLiveDemo: true,
     seeOnGithubUrl: "https://github.com/maatheuus/WeatherApp",
-    technologyUsed: "JavaScript",
+    technologyUsed: ["JavaScript"],
     style: "Css",
   },
   {
@@ -57,7 +57,7 @@ export const projects = [
     image: foodApp,
     existLiveDemo: false,
     seeOnGithubUrl: "https://github.com/maatheuus/ReactFood",
-    technologyUsed: "React",
+    technologyUsed: ["React", "NodeJs"],
     style: "Css",
   },
   {
@@ -71,7 +71,7 @@ export const projects = [
     liveDemoUrl: "https://react-fastpizza.netlify.app/",
     existLiveDemo: true,
     seeOnGithubUrl: "https://github.com/maatheuus/Fast-React-Pizza",
-    technologyUsed: "React",
+    technologyUsed: ["React"],
     style: "Tailwind",
   },
 ];

@@ -1,3 +1,5 @@
+import { FaJs, FaReact, FaSass, FaCss3, FaNodeJs } from "react-icons/fa";
+
 import trillo from "../assents/imagesProjects/TrilloPhoto.png";
 import weather from "../assents/imagesProjects/WeatherPhoto.png";
 import foodApp from "../assents/imagesProjects/ReactFoodPhoto.png";
@@ -16,7 +18,7 @@ export const projects = [
     liveDemoUrl: "https://hotelstrillo.netlify.app/",
     existLiveDemo: true,
     seeOnGithubUrl: "https://github.com/maatheuus/Trillo-Hotel",
-    technologyUsed: ["JavaScript"],
+    technologyUsed: ["FaJs"],
     style: "Sass",
   },
   {
@@ -30,7 +32,7 @@ export const projects = [
     liveDemoUrl: "https://vactions-plan.vercel.app/",
     existLiveDemo: true,
     seeOnGithubUrl: "https://github.com/maatheuus/VactionPlan",
-    technologyUsed: ["React"],
+    technologyUsed: ["FaReact"],
     style: "Sass",
   },
   {
@@ -44,7 +46,7 @@ export const projects = [
     liveDemoUrl: "https://maatheuus.github.io/WeatherApp/",
     existLiveDemo: true,
     seeOnGithubUrl: "https://github.com/maatheuus/WeatherApp",
-    technologyUsed: ["JavaScript"],
+    technologyUsed: ["FaJs"],
     style: "Css",
   },
   {
@@ -57,7 +59,7 @@ export const projects = [
     image: foodApp,
     existLiveDemo: false,
     seeOnGithubUrl: "https://github.com/maatheuus/ReactFood",
-    technologyUsed: ["React", "NodeJs"],
+    technologyUsed: ["FaReact", "FaNodeJs"],
     style: "Css",
   },
   {
@@ -71,7 +73,7 @@ export const projects = [
     liveDemoUrl: "https://react-fastpizza.netlify.app/",
     existLiveDemo: true,
     seeOnGithubUrl: "https://github.com/maatheuus/Fast-React-Pizza",
-    technologyUsed: ["React"],
+    technologyUsed: ["FaReact"],
     style: "Tailwind",
   },
 ];

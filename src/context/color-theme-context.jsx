@@ -1,5 +1,4 @@
 import { createContext, useReducer } from "react";
-
 import CircleHalf from "../Components/svg/CircleHalf";
 import Sun from "../Components/svg/Sun";
 import Moon from "../Components/svg/Moon";

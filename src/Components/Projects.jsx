@@ -56,7 +56,7 @@ function Projects(props) {
           </div>
 
           <div className="projects__icons">
-            <IconsTech icons={technology} />
+            <IconsTech iconsTech={technology} />
           </div>
 
           <div className="links">
